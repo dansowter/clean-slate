@@ -15,4 +15,10 @@ angular.module('clientApp', [
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .run(function($rootScope) {
+    $rootScope.$on('$viewContentLoaded', function () {
+      $(document).foundation();
+    });
   });
+

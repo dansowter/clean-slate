@@ -63,7 +63,7 @@ module.exports = function(grunt) {
       proxies: [{
         context: '/api/v1',
         host: '0.0.0.0',
-        port: 3000,
+        port: 1337,
         https: false,
         changeOrigin: false,
         xforward: false

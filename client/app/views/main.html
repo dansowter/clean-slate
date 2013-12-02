@@ -1,5 +1,17 @@
 <div class="row">
   <div class="medium-12 columns">
-    <h1>Clean Slate</h1>
+    <h1>Items</h1>
+
+    <table ng-show="items.length">
+      <tr ng-repeat="item in items">
+        <td>{{item.name}}</td>
+        <td ng-click="remove($index)">Remove</td>
+      </tr>
+    </table>
+
+    <form ng-submit="addItem()">
+      <input type="text" ng-model="newItem.name">
+      <button>Add</button>
+    </form>
   </div>
 </div>

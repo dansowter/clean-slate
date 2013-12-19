@@ -1,0 +1,6 @@
+# Sequel Database Configuration
+
+development: "postgres://dansowter@localhost/server_development"
+test: "postgres://dansowter@localhost/server_test"
+production: "postgres://dansowter@localhost/server_production"
+

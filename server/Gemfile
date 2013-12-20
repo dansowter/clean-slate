@@ -1,0 +1,37 @@
+source 'https://rubygems.org'
+ruby '2.0.0'
+
+gem 'rails', '4.0.2'
+gem 'rack-cors'
+
+gem 'active_model_serializers'
+gem 'pundit'
+gem 'devise'
+gem 'pg'
+gem 'pg_search'
+gem 'sidekiq'
+gem 'state_machine'
+
+group :development do
+  gem 'bullet'
+  gem 'rails-erd'
+end
+
+group :development, :test do
+  gem 'awesome_print'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'guard-rspec', github: 'guard/guard-rspec', require: false
+  gem 'pry-meta'
+  gem 'rb-fsevent', '~> 0.9.1'
+  gem 'rspec-rails', '~> 2.14.0'
+  gem 'thin'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'simplecov', require: false
+  gem "spring"
+  gem "spring-commands-rspec", require: false
+end

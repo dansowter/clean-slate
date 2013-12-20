@@ -5,7 +5,7 @@ gem 'rails', '4.0.2'
 gem 'rack-cors'
 
 gem 'active_model_serializers'
-gem 'pundit'
+gem 'cancan'
 gem 'devise'
 gem 'pg'
 gem 'pg_search'

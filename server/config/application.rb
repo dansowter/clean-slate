@@ -6,6 +6,8 @@ Bundler.require(:default, Rails.env)
 
 module Server
   class Application < Rails::Application
+    I18n.enforce_available_locales = false
+
     config.autoload_paths += %W(#{config.root}/lib)
     config.assets.enabled = false
 

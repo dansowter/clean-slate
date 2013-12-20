@@ -43,6 +43,7 @@ GEM
     bullet (4.7.1)
       activesupport
       uniform_notifier (>= 1.4.0)
+    cancan (1.6.10)
     celluloid (0.15.2)
       timers (~> 1.1.0)
     choice (0.1.6)
@@ -111,8 +112,6 @@ GEM
     pry-remote (0.1.7)
       pry (~> 0.9)
       slop (~> 3.0)
-    pundit (0.2.1)
-      activesupport (>= 3.0.0)
     rack (1.5.2)
     rack-cors (0.2.9)
     rack-test (0.6.2)
@@ -209,6 +208,7 @@ DEPENDENCIES
   active_model_serializers
   awesome_print
   bullet
+  cancan
   database_cleaner
   devise
   factory_girl_rails
@@ -217,7 +217,6 @@ DEPENDENCIES
   pg
   pg_search
   pry-meta
-  pundit
   rack-cors
   rails (= 4.0.2)
   rails-erd

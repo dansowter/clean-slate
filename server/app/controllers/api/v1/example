@@ -1,0 +1,39 @@
+class Api::V1::ExamplesController < ApplicationController
+  load_and_authorize_resource
+
+  def index
+    render_serialized @examples
+  end
+
+  def show
+    render_serialized @example
+  end
+
+  def create
+    @example = Example.new(example_params)
+    if @example.save
+      render_serialized @example, status: :created
+    else
+      render json: @example.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    if @example.update(example_params)
+      render_serialized @example
+    else
+      render json: @example.errors, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @example.destroy
+    head :no_content
+  end
+
+  private
+
+  def example_params
+    params.permit(:foo)
+  end
+end
